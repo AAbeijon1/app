@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Informe de Datos</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    <style>
+        .dataframe {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .dataframe th, .dataframe td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        .dataframe th {
+            background-color: #f2f2f2;
+        }
+        /* Estilos adicionales para mejorar la visualización de DataTables */
+        .display {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Informe de Datos</h1>
+    <div>
+        <!-- Renderiza el DataFrame como HTML -->
+        {{ df_html|safe }}
+    </div>
+    <script>
+    $(document).ready(function () {
+        $('.dataframe').DataTable({
+            // Opciones de configuración de DataTables
+        });
+    });
+    </script>
+</body>
+</html>
